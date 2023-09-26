@@ -1,20 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(46, 53, 63);
+    --secondary-color: rgb(24, 38, 56);
+}
+
 body {
+    background-color: var(--primary-color);
+    color: rgb(238, 236, 231);
     font-family: Courier;
-    font-size: 25px;
-    background-color: rgb(246, 238, 227);
-    color: rgb(25, 25, 25);
-    margin-bottom: 0;
+    margin: 0%;
+}
+
+header {
+    padding: 25px;
+    display: flex;
+    background-color: var(--secondary-color);
+}
+
+.search {
+    background-color: transparent;
+    border: 3px solid var(--primary-color);
+    padding: 10px;
+    border-radius: 15px;
+    color: rgb(238, 236, 231);
+    justify-content: flex-end;
+}
+
+.search:focus {
+    outline: 0;
+    background-color: var(--primary-color);
+}
+
+.search::placeholder {
+    color: rgb(158, 157, 156);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie.info h3 {
     margin-top: 0;
-    padding: 50px;
 }
 
-.page-title {
-    font-size: 50px;
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
     font-weight: bold;
-    text-align: center;
+}
+.movie.info span.green {
+    color: rgb(24, 165, 24);
 }
 
-.description-1 {
+.movie.info span.orange {
+    color: rgb(218, 105, 0);
+}
+
+.movie-info span.red {
+    color: rgb(219, 0, 0);
+}
+
+/* .description-1 {
     font-size: 15px;
 }
 
@@ -28,20 +103,11 @@ li {
 
 html {
     min-height: 100%;
-    overflow: hidden;
-}
+    margin: auto;
+    width: 960px;
+} */
 
-.search {
-    text-align: center;
-    padding: 10px;
-    padding-top: 0px;
-}
-
-.search-bar {
-    font-family: Courier;
-}
-
-.line-1{
+/* .line-1{
       position: relative;
       top: 50%;  
       width: 24em;
@@ -52,10 +118,10 @@ html {
       white-space: nowrap;
       overflow: hidden;
       transform: translateY(-50%);    
-}
+} */
 
 /* Animation */
-.page-title {
+/* .page-title {
     animation: page-title 1.5s steps(9) 1s 1 normal both,
                blinkTextCursor 750ms steps(9) infinite normal;
   }
@@ -66,6 +132,6 @@ html {
   }
 
   @keyframes blinkTextCursor {
-    from{border-right-color: rgba(25, 25, 25);}
+    from{border-right-color: rgb(246, 238, 227);}
     to{border-right-color: transparent;}
-  }
+  } */
